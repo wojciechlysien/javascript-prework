@@ -7,3 +7,6 @@ function printMessage(msg) {
 function clearMessages() {
   document.getElementById('messages').innerHTML = '';
 }
+
+let computerMove = 'kamien';
+let playerMove = 'papier'
