@@ -9,4 +9,4 @@ function clearMessages() {
 }
 
 let computerMove = 'kamien';
-let playerMove = 'papier'
+let playerMove = 'papier',
