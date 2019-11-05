@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h3 {
+  margin: 30px 0;
+}
+
+h1,
+h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.container {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.select img {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.messages {
+  margin: 30px;
+  font-size: 16px;
+}
