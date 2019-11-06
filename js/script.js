@@ -1,8 +1,4 @@
-const summary = {
-  wins: 0,
-  losses: 0,
-  draws: 0,
-}
+
 const game = {
   playerMove: '',
   computerMove: '',
@@ -17,17 +13,11 @@ function handSelection() {
   this.style.boxShadow = '0 0 0 4px green';
 }
 
-hands.forEach(hand => hand.addEventListener('click', handSelection))
-
-document.querySelector('.play').addEventListener('click', playGame)
-
 
 function playGame(playerInput) {
   if (!game.playerMove) {
-    return alert('Zaznacz dłoń!!!')
+    return alert('Wybierz dłoń!!!')
   }
-
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
 
   function printMessage(msg) {
     let div = document.createElement('div');
@@ -35,8 +25,10 @@ function playGame(playerInput) {
     document.querySelector('.messages').appendChild(div);
   }
 
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
   let playerMove = getMoveName(playerInput);
   let computerMove = getMoveName(randomNumber);
+
   function getMoveName(playerMove, computerMove) {
 
     if (computerMove == 1) {
@@ -68,10 +60,12 @@ function playGame(playerInput) {
   }
 
   displayResult(playerMove, computerMove);
-}
 
+}
 function clearMessages() {
-  document.getElementById('messages').innerHTML = '';
+  document.querySelector('.messages').innerHTML = '';
 }
 
+hands.forEach(hand => hand.addEventListener('click', handSelection))
 document.querySelector('.play').addEventListener('click', playGame)
+document.querySelector('.reset').addEventListener('click', clearMessages) 
