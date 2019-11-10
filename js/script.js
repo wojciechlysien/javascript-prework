@@ -1,4 +1,4 @@
-function playGame(playerInput) {
+const playGame = function (playerInput) {
 
   function printMessage(msg) {
     var div = document.createElement('div');
@@ -10,7 +10,8 @@ function playGame(playerInput) {
   let playerMove = getMoveName(playerInput);
   let computerMove = getMoveName(randomNumber);
 
-  function getMoveName(playerMove, computerMove) {
+  const getMoveName = function (playerMove, computerMove) {
+
     if (computerMove == 1) {
       return 'kamień';
     }
@@ -27,8 +28,8 @@ function playGame(playerInput) {
       return 'nożyce';
     }
   }
+  const displayResult = function (argPlayerMove, argComputerMove) {
 
-  function displayResult(argPlayerMove, argComputerMove) {
     if (argPlayerMove === argComputerMove) {
       printMessage('Remis')
     } else if ((argPlayerMove === 'papier' && argComputerMove === 'kamień') || (argPlayerMove === 'kamień' && argComputerMove === 'nożyce') || (argPlayerMove === 'nożyce' && argComputerMove === 'papier')) {
