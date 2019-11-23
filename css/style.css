@@ -2,22 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: roboto, sans-serif;
 }
 
 body {
   background-color: blanchedalmond;
-  font-family: roboto, sans-serif;
 }
 
-h1,
-h3 {
+h1 {
   text-align: center;
   margin: 20px 0;
 }
 
 h3 {
   margin: 30px 0;
+}
+
+.panel {
+  margin: 20px;
+}
+
+.panel-left,
+.panel-right {
+  display: inline-block;
+  width: 48%;
+  overflow: hidden;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.panel-left p {
+  font-size: 20px;
+}
+
+.panel h3 {
+  text-align: center;
 }
 
 h1,
@@ -29,7 +48,7 @@ h2 {
   font-size: 40px;
 }
 
-.container {
+.select {
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
@@ -41,16 +60,332 @@ h2 {
   margin: 20px;
   display: inline-block;
   cursor: pointer;
-
 }
 
-#messages {
-  margin: 30px;
-  font-size: 16px;
-}
-
-#reset {
+button {
+  display: block;
+  padding: 5px 20px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  background-color: #fafafa;
+  font-weight: bold;
+  margin: 10px auto;
+  transition: .3s;
   font-size: 30px;
-  padding: 10px;
-  margin-top: 20px;
+  cursor: pointer;
 }
+
+button:hover {
+  background-color: #141414;
+  color: white;
+}
+
+span {
+  font-weight: bold;
+}
+
+@media (orientation: portrait) and (min-width: 320px) {
+  .select img {
+    width: 100px;
+    margin: 8px;
+  }
+  h1 {
+    font-size: 18px;
+    margin: 18px 0;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    margin: 10px;
+  }
+  .panel-left p {
+    font-size: 12px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 95%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+  .select img {
+    width: 120px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    margin: 10px;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 95%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 375px) {
+  .select img {
+    width: 120px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    margin: 10px;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 95%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 411px) {
+  .select img {
+    width: 150px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  h3 {
+    margin: 10px;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 95%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .select img {
+    width: 180px;
+    margin: 20px;
+  }
+  h1 {
+    font-size: 35px;
+    margin: 40px 0;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .panel-left p {
+    font-size: 20px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+    margin: 10px 10px 10px;
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+  }
+  button {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+  .select img {
+    width: 250px;
+    margin: 20px;
+  }
+  h1 {
+    font-size: 40px;
+    margin: 50px 0;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  .panel-left p {
+    font-size: 35px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+    padding: 10px 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 35px;
+  }
+  button {
+    font-size: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 530px) {
+  .select img {
+    width: 100px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 18px 0;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 10px auto;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+    padding: 10px 10px 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  .select img {
+    width: 130px;
+  }
+  h1 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 10px auto;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+    padding: 10px 10px 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+  .select img {
+    width: 150px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 25px 0;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 10px auto;
+  }
+  .panel-left p {
+    font-size: 15px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+    padding: 10px 10px 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  h1 {
+    font-size: 35px;
+    margin: 30px 0;
+  }
+  h3 {
+    font-size: 25px;
+    margin: 10px auto;
+  }
+  .panel-left p {
+    font-size: 25px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 49%;
+    padding: 10px 10px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 25px;
+  }
+  button {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
