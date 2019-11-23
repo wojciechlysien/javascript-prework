@@ -9,21 +9,39 @@
 
 <body>
   <h1>
-    GRA "PAPIER, KAMIEN, NOŻYCE"</h1>
+    GAME "PAPER, STONE, SCISSORS"</h1>
 
-  <h3>Please choose:</h3>
+  <div class="select">
 
-  <div class="container">
-    <div id="buttons">
-      <button id="papier"><img data-option="papier" class="first" src="images/paper.jpg" alt="" title="papier"></button>
-      <button id="kamień"><img data-option="kamień" src="images/stone.jpg" alt="" title="kamień"></button>
-      <button id="nożyce"><img data-option="nożyce" src="images/scissors.jpg" alt="" title="nożyce"></button>
-    </div>
-    <div id="messages">Wygral:</div>
-    <button id="reset">Reset</button>
+    <h3>Please choose:</h3>
+
+    <img data-option="Paper" class="first" src="paper.jpg" alt="" title="Paper">
+
+    <img data-option="Stone" src="stone.jpg" alt="" title="Stone">
+
+    <img data-option="Scissors" src="scissors.jpg" alt="" title="scissors">
+
   </div>
-  <script src="js/functions.js"></script>
-  <script src="js/script.js"></script>
+
+  <button class="start">Let's play!</button>
+
+  <div class="panel-left">
+    <h3>The results of the game:</h3>
+    <p>Your choice: <span data-summary="your-choice"></span></p>
+    <p>Computer choice: <span data-summary="ai-choice"></span></p>
+    <h2>The winner: <span data-summary="who-win"></span></h2>
+  </div>
+
+  <div class="panel-right">
+    <h3>Current results</h3>
+    <p class="numbers">Number of games: <span>0</span></p>
+    <p class="wins">Winnings: <span>0</span></p>
+    <p class="losses">
+      Losers: <span>0</span></p>
+    <p class="draws">Draws: <span>0</span></p>
+  </div>
+
+  <script src="game.js"></script>
 </body>
 
 </html>
